@@ -1,32 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@700&display=swap');
+
+/** General Styling **/
+
 body {
     font-family: "Roboto Slab", serif;
 }
 
 :root {
+    font-size: 20px;
     --navy: #0F182D;
     --white: #FFFFFF;
     --green: #25BB00;
     --yellow: #FFC700;
 }
 
-/** index page **/
-
-.index-header {
+.header {
     background: var(--navy);
     color: var(--white);
-    display: flex;
+    display: flex;;
+    justify-content: space-between;
     align-items: center;
-    padding-right: 50px;
-    border: 2px solid blue;
+    padding: 10px 30px;
 }
 
-.index-header > a {
+ a {
     text-decoration: none;
     color: var(--white);
+    text-align: center;
 }
 
-.index-header > a::after {
+a::after {
     color: var(--white);
 }
 
