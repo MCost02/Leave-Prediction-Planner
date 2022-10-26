@@ -12,6 +12,7 @@
 
 body {
     font-family: "Roboto Slab", serif;
+    color: var(--white);
 }
 
 body::before {
@@ -52,7 +53,28 @@ a::after {
     color: var(--white);
 }
 
+/** login page **/
 
+.login-container {
+    border: 2px solid blue;
+    width: 80%;
+    height: 80vh;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.login {
+    border: 2px solid red;
+    width: 60vw;
+    max-width: 500px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.login > h2 {
+    text-align: center;
+}
 
 
 
