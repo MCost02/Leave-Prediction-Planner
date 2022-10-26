@@ -2,10 +2,6 @@
 
 /** General Styling **/
 
-body {
-    font-family: "Roboto Slab", serif;
-}
-
 :root {
     font-size: 20px;
     --navy: #0F182D;
@@ -14,13 +10,36 @@ body {
     --yellow: #FFC700;
 }
 
+body {
+    font-family: "Roboto Slab", serif;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: var(--navy);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://images.pexels.com/photos/2382848/pexels-photo-2382848.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    filter: brightness(80%);
+}
+
+
 .header {
     background: var(--navy);
     color: var(--white);
     display: flex;;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    padding: 15px 35px;
+    border-radius: 10px;
+    opacity: 0.95;
 }
 
  a {
