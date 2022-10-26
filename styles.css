@@ -4,5 +4,19 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+:root {
+    --navy: #0F182D;
+    --white: #FFFFFF;
+    --green: #25BB00;
+    --yellow: #FFC700;
+}
+
 /** index page **/
+
+.index-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
