@@ -39,7 +39,6 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 15px 35px;
-    border-radius: 10px;
     opacity: 0.95;
 }
 
@@ -61,14 +60,15 @@ a::after {
     margin: 0 auto;
 }
 
+
 .login {
-    width: 60vw;
     max-width: 500px;
     min-width: 300px;
     height: 400px;
-    margin: 0 auto;
+    margin: 45px auto;
     padding: 10px;
-    background-color: var(--navy);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .login > h2 {
@@ -106,6 +106,8 @@ input {
     background-color: var(--yellow);
     font-size: 20px;
 }
+
+
 
 
 
