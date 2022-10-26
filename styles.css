@@ -53,7 +53,7 @@ a::after {
 
 /** login page **/
 
-#login-container {
+#account-container {
     width: 80%;
     padding: 40px;
     margin: 0 auto;
@@ -111,6 +111,7 @@ input {
     background-color: #ffc800b5;
     cursor: pointer;
 }
+
 
 
 
