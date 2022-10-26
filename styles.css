@@ -39,7 +39,6 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 15px 35px;
-    opacity: 0.95;
 }
 
  a {
@@ -68,7 +67,7 @@ a::after {
     margin: 45px auto;
     padding: 10px;
     border-radius: 10px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(15,24,45,0.95);
 }
 
 .login > h2{
