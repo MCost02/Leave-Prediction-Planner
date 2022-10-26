@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@700&display=swap');
 body {
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto Slab", serif;
 }
 
 :root {
@@ -14,9 +13,24 @@ body {
 /** index page **/
 
 .index-header {
+    background: var(--navy);
+    color: var(--white);
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-right: 50px;
+    border: 2px solid blue;
 }
+
+.index-header > a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.index-header > a::after {
+    color: var(--white);
+}
+
+
+
 
 
