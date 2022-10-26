@@ -64,14 +64,14 @@ a::after {
 .login {
     max-width: 500px;
     min-width: 300px;
-    height: 400px;
+    height: 450px;
     margin: 45px auto;
     padding: 10px;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.7);
 }
 
-.login > h2 {
+.login > h2{
     text-align: center;
 }
 
@@ -112,6 +112,9 @@ input {
     background-color: #ffc800b5;
     cursor: pointer;
 }
+
+
+
 
 
 
