@@ -107,6 +107,10 @@ input {
     font-size: 20px;
 }
 
+#account-submit:hover {
+    background-color: #ffc800b5;
+    cursor: pointer;
+}
 
 
 
