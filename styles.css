@@ -118,6 +118,7 @@ input {
 }
 
 /**Calander Styling**/
+
 #header {
     padding: 10px;
     color: var(--navy);
@@ -130,12 +131,12 @@ input {
 
   #container {
     width: 790px;
-    height: 700px;
+    height: 500px;
     overflow-y:auto;
     display: flex;
     justify-content: center;
-    margin: auto;
-    margin-top: 50px;
+    margin: 50px auto;
+    padding: 20px;
     background-color: #FFFCFF;
   }
   #weekdays {
