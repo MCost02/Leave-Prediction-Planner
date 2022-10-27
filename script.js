@@ -7,7 +7,7 @@ const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Frida
 function load() {
     var date = new Date();
 
-    for (let x = 0; x <12; x++) {
+    for (let x = 0; x <25; x++) {
         
         const day = date.getDate();
         const month = date.getMonth();
