@@ -8,8 +8,6 @@ function load() {
     var date = new Date();
 
     for (let x = 0; x <12; x++) {
-        date = new Date(date.setMonth(date.getMonth() + 1));
-
         
         const day = date.getDate();
         const month = date.getMonth();
@@ -59,7 +57,7 @@ function load() {
         const block = document.createElement('div');
         block.classList.add('space');
         calendar.appendChild(block);
-
+        date = new Date(date.setMonth(date.getMonth() + 1));
     }
     
 }
