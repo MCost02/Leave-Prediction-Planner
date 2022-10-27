@@ -138,6 +138,7 @@ input {
     margin: 50px auto;
     padding: 20px;
     background-color: #FFFCFF;
+    border-radius: 15px;
   }
   #weekdays {
     width: 100%;
