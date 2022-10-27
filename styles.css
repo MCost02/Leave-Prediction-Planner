@@ -41,6 +41,11 @@ body::before {
     padding: 15px 35px;
 }
 
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+
  a {
     text-decoration: none;
     color: var(--white);
