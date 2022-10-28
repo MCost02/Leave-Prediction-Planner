@@ -35,7 +35,8 @@ body::before {
 .header {
     background: var(--navy);
     color: var(--white);
-    display: flex;;
+    display: flex;
+    ;
     justify-content: space-between;
     align-items: center;
     padding: 15px 35px;
@@ -46,7 +47,7 @@ body::before {
     gap: 30px;
 }
 
- a {
+a {
     text-decoration: none;
     color: var(--white);
     text-align: center;
@@ -72,10 +73,10 @@ a::after {
     margin: 45px auto;
     padding: 10px;
     border-radius: 10px;
-    background: rgba(15,24,45,0.95);
+    background: rgba(15, 24, 45, 0.95);
 }
 
-.login > h2{
+.login>h2 {
     text-align: center;
 }
 
@@ -98,7 +99,8 @@ input {
 
 }
 
-#email, #password {
+#email,
+#password {
     padding: 0px 6px;
 }
 
@@ -119,6 +121,14 @@ input {
 
 /**Calendar Styling**/
 
+.full-calendar {
+    display: flex;
+}
+
+#legend {
+    background-color: blue;
+}
+
 #header {
     padding: 10px;
     color: var(--navy);
@@ -127,12 +137,12 @@ input {
     display: flex;
     justify-content: space-between;
     width: 770px;
-  }
+}
 
-  #container {
+#container {
     width: 790px;
     height: 500px;
-    overflow-y:auto;
+    overflow-y: auto;
     display: flex;
     justify-content: center;
     margin: 50px auto;
@@ -140,25 +150,29 @@ input {
     background-color: #FFFCFF;
     border-radius: 15px;
     border: 4px solid var(--navy);
-  }
-  #weekdays {
+}
+
+#weekdays {
     width: 100%;
     display: flex;
     color: var(--navy);
-  }
-  #weekdays div {
+}
+
+#weekdays div {
     width: 100px;
     padding: 10px;
     font-size: 16px;
-    
-  }
-  #calendar {
+
+}
+
+#calendar {
     width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
-  }
-  .day {
+}
+
+.day {
     width: 100px;
     padding: 10px;
     height: 100px;
@@ -170,29 +184,58 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    color:var(--navy);
+    color: var(--navy);
     font-size: 16px;
-  }
-  .space {
+}
+
+.space {
     width: 770px;
     height: 100px;
-  }
-  .padding {
+}
+
+.padding {
     cursor: default !important;
     background-color: #FFFCFF !important;
     box-shadow: none !important;
-  }
+}
 
+/**Profile Page**/
 
+#profile-container {
+    width: 80%;
+    padding: 40px;
+    margin: 0 auto;
+}
 
+.profile {
+    max-width: 500px;
+    min-width: 300px;
+    height: 450px;
+    margin: 45px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(15, 24, 45, 0.95);
+}
 
+.profile>h2 {
+    text-align: center;
+}
 
+.profile-form {
+    padding: 0px 60px;
+}
 
+#profile-submit {
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+    height: 50px;
+    background-color: var(--yellow);
+    font-size: 20px;
+    font-family: 'Roboto slab', serif;
+}
 
-
-
-
-
-
-
-
+#profile-submit:hover {
+    background-color: #ffc800b5;
+    cursor: pointer;
+}

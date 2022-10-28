@@ -12,3 +12,14 @@ const users = [{
     password: '321',
     type: 'admin',
 }]
+
+//Login function
+function login() {
+    document.getElementById("email").innerHTML;
+
+};
+
+//Sign-Up function
+function signUp() {
+    document.getElementById("email").innerHTML;
+}

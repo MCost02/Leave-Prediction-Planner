@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Home Page</title>
+    <title>Profile Page</title>
 </head>
 
 <body>
@@ -18,22 +18,22 @@
         </nav>
     </header>
 
-    <main>
-
-        <div class="profile-container">
+    <div class="profile-container">
+        <div class="profile">
             <h2>Edit Profile</h2>
             <h3 id="save"></h3>
-            <form class="profile" action="#">
+            <form class="profile-form">
                 <label for="fname">First Name<input type="text" id="fname" name="fname" required></label>
                 <label for="lname">Last Name<input type="text" id="lname" name="lname" required></label>
-                <label for="email">Change Email<input type="email" id="email" name="email" required></label>
+                <label for="email" id="email-label">Change Email<input type="email" id="email" name="email"
+                        required></label>
                 <label for="password">Password<input type="text" id="password" name="password" required></label>
                 <label for="confirmpass">Confirm Password<input type="text" id="confirmpass" name="confirmpass"
                         required></label>
-                <input type="submit" id="login-submit" value="Save" onclick="profileSave(); return false;">
+                <input type="submit" id="profile-submit" value="Save" onclick="profileSave(); return false;">
             </form>
         </div>
-    </main>
+    </div>
     <script src="profile.js"></script>
 
 </body>
