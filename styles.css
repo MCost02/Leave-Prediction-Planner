@@ -218,6 +218,18 @@ input {
     font-size: 16px;
 }
 
+.day:nth-child(21n + 4) {
+    background-color: green;
+}
+
+.day:nth-child(21n) {
+    background-color: yellow;
+}
+
+.day:nth-child(17n) {
+    background-color: red;
+}
+
 .space {
     width: 770px;
     height: 100px;
