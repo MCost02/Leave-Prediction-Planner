@@ -6,7 +6,6 @@
     font-size: 20px;
     --navy: #0F182D;
     --white: #FFFFFF;
-    --green: #25BB00;
     --yellow: #FFC700;
 }
 
@@ -132,8 +131,33 @@ input {
 
 #legend {
     background-color: var(--navy);
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#legend > h3 {
+    text-align: center;
+}
+
+
+
+.legend-info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    margin-left: 10px;
+}
+
+.legend-info p {
+    font-size: 16px;
+}
+
+.square {
+    width: 20px;
+    height: 20px;
 }
 
 #header {
