@@ -254,30 +254,24 @@ input {
     min-width: 300px;
     height: 450px;
     margin: 45px auto;
-    padding: 10px;
+    padding: 20px 40px;
     border-radius: 10px;
     background: rgba(15, 24, 45, 0.95);
 }
 
-.profile>h2 {
+.profile >h2 {
     text-align: center;
 }
 
-.profile-form {
-    padding: 0px 60px;
+.profile-info h3, .profile-info p {
+    display: inline;
 }
 
-#profile-submit {
-    text-align: center;
-    width: 100%;
+.profile-info p {
+    margin-left: 10px;
+}
+
+.profile-info {
     margin-top: 20px;
-    height: 50px;
-    background-color: var(--yellow);
-    font-size: 20px;
-    font-family: 'Roboto slab', serif;
 }
 
-#profile-submit:hover {
-    background-color: #ffc800b5;
-    cursor: pointer;
-}

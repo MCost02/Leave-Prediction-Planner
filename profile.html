@@ -11,7 +11,7 @@
 
 <body>
     <header class="header">
-        <h1>Profile</h1>
+        <h1>Leave Prediction Planner</h1>
         <nav class="navigation">
             <a href="instructor-home.html">Home</a>
             <a href="index.html">Sign Out</a>
@@ -19,19 +19,16 @@
     </header>
 
     <div class="profile-container">
-        <div class="profile" style="height: 780px;">
-            <h2>Edit Profile</h2>
-            <h3 id="save"></h3>
-            <form class="profile-form" href="editprofile.html">
-                <label for="fname">First Name<input type="text" id="fname" name="fname" required></label>
-                <label for="lname">Last Name<input type="text" id="lname" name="lname" required></label>
-                <label for="email" id="email-label">Change Email<input type="email" id="email" name="email"
-                        required></label>
-                <label for="password">Password<input type="text" id="password" name="password" required></label>
-                <label for="confirmpass">Confirm Password<input type="text" id="confirmpass" name="confirmpass"
-                        required></label>
-                <input type="submit" id="profile-submit" value="Save" onclick="profileSave(); return false;">
-            </form>
+        <div class="profile" style="height: 500px;">
+            <h2>Profile</h2>
+            <div class=profile-info>
+                <h3>Name:</h3>
+                <p>John Deer</p>
+            </div>
+            <div class=profile-info>
+                <h3>Email:</h3>
+                <p>JohnD@gmail.com</p>
+            </div>
         </div>
     </div>
     <script src="profile.js"></script>
