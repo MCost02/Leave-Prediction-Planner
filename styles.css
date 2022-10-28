@@ -123,10 +123,17 @@ input {
 
 .full-calendar {
     display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-content: center;
+    margin-top: 40px;
+    margin-right: 150px;
 }
 
 #legend {
-    background-color: blue;
+    background-color: var(--navy);
+    width: 200px;
+    height: 300px;
 }
 
 #header {
@@ -145,7 +152,6 @@ input {
     overflow-y: auto;
     display: flex;
     justify-content: center;
-    margin: 50px auto;
     padding: 20px;
     background-color: #FFFCFF;
     border-radius: 15px;
