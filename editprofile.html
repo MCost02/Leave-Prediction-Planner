@@ -24,16 +24,16 @@
             <h3 id="save" style="font-size: 16px;"></h3>
             <form class="profile-form" name="profileform">
                 <label for="fname">First Name<input type="text" id="fname" name="fname" onKeyup="checkform()"
-                        required></label>
+                        placeholder="John" required></label>
                 <label for="lname">Last Name<input type="text" id="lname" name="lname" onKeyup="checkform()"
-                        required></label>
+                    placeholder="Deer" required></label>
                 <label for="email" id="email-label">Change Email<input type="email" id="email" name="email"
-                        onKeyup="checkform()" required></label>
+                        onKeyup="checkform()"    placeholder="JohnD@gmail.com" required></label>
                 <label for="password">Password<input type="text" id="password" name="password" onKeyup="checkform()"
                         required></label>
                 <label for="confirmpass">Confirm Password<input type="text" id="confirmpass" name="confirmpass"
                         onKeyup="checkform()" required></label>
-                <input type="submit" id="profile-submit" value="Save" onclick="profileSave(); return false;">
+                <input type="submit" id="save-submit" value="Save" onclick="profileSave(); return false;" formaction="profile.html">
             </form>
         </div>
     </div>

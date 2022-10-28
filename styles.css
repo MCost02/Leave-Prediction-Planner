@@ -118,7 +118,7 @@ input {
     cursor: pointer;
 }
 
-/**Calendar Styling**/
+/**********************Calendar Styling********************/
 
 .full-calendar {
     display: flex;
@@ -241,7 +241,7 @@ input {
     box-shadow: none !important;
 }
 
-/**Profile Page**/
+/*******************************Profile Page***********************************/
 
 #profile-container {
     width: 80%;
@@ -261,6 +261,7 @@ input {
 
 .profile >h2 {
     text-align: center;
+    text-decoration: underline;
 }
 
 .profile-info h3, .profile-info p {
@@ -275,3 +276,20 @@ input {
     margin-top: 20px;
 }
 
+.important-dates {
+    margin-top: 40px;
+}
+
+.important-dates h3 {
+    text-decoration: underline;
+}
+
+#edit, #save-submit {
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    height: 50px;
+    background-color: var(--yellow);
+    font-size: 20px;
+    font-family: 'Roboto slab', serif;
+}
