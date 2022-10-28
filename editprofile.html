@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Profile Page</title>
+    <title>Edit Profile Page</title>
 </head>
 
 <body>
     <header class="header">
-        <h1>Profile</h1>
+        <h1>Edit Profile</h1>
         <nav class="navigation">
             <a href="instructor-home.html">Home</a>
             <a href="index.html">Sign Out</a>
@@ -19,22 +19,25 @@
     </header>
 
     <div class="profile-container">
-        <div class="profile" style="height: 780px;">
+        <div class="profile" style="height: 750px;">
             <h2>Edit Profile</h2>
-            <h3 id="save"></h3>
-            <form class="profile-form" href="editprofile.html">
-                <label for="fname">First Name<input type="text" id="fname" name="fname" required></label>
-                <label for="lname">Last Name<input type="text" id="lname" name="lname" required></label>
+            <h3 id="save" style="font-size: 16px;"></h3>
+            <form class="profile-form" name="profileform">
+                <label for="fname">First Name<input type="text" id="fname" name="fname" onKeyup="checkform()"
+                        required></label>
+                <label for="lname">Last Name<input type="text" id="lname" name="lname" onKeyup="checkform()"
+                        required></label>
                 <label for="email" id="email-label">Change Email<input type="email" id="email" name="email"
+                        onKeyup="checkform()" required></label>
+                <label for="password">Password<input type="text" id="password" name="password" onKeyup="checkform()"
                         required></label>
-                <label for="password">Password<input type="text" id="password" name="password" required></label>
                 <label for="confirmpass">Confirm Password<input type="text" id="confirmpass" name="confirmpass"
-                        required></label>
+                        onKeyup="checkform()" required></label>
                 <input type="submit" id="profile-submit" value="Save" onclick="profileSave(); return false;">
             </form>
         </div>
     </div>
-    <script src="profile.js"></script>
+    <script src="ediprofile.js"></script>
 
 </body>
 
