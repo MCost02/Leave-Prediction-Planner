@@ -1,0 +1,25 @@
+{
+  "name": "leave-prediction-planner",
+  "version": "1.0.0",
+  "description": "A web-app that displays and predicts manpower shortages for the 352d Special Warfare Training Squadron (SWTS) of the United States Air Force.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MCost02/Leave-Prediction-Planner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MCost02/Leave-Prediction-Planner/issues"
+  },
+  "homepage": "https://github.com/MCost02/Leave-Prediction-Planner#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "req": "^0.1.4"
+  }
+}

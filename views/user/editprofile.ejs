@@ -13,8 +13,8 @@
     <header class="header">
         <h1>Leave Prediction Planner</h1>
         <nav class="navigation">
-            <a href="instructor-home.html">Home</a>
-            <a href="index.html">Sign Out</a>
+            <a href="/instructor-home">Home</a>
+            <a href="/">Sign Out</a>
         </nav>
     </header>
 
@@ -26,18 +26,19 @@
                 <label for="fname">First Name<input type="text" id="fname" name="fname" onKeyup="checkform()"
                         placeholder="John" required></label>
                 <label for="lname">Last Name<input type="text" id="lname" name="lname" onKeyup="checkform()"
-                    placeholder="Deer" required></label>
+                        placeholder="Deer" required></label>
                 <label for="email" id="email-label">Change Email<input type="email" id="email" name="email"
-                        onKeyup="checkform()"    placeholder="JohnD@gmail.com" required></label>
+                        onKeyup="checkform()" placeholder="JohnD@gmail.com" required></label>
                 <label for="password">Password<input type="text" id="password" name="password" onKeyup="checkform()"
                         required></label>
                 <label for="confirmpass">Confirm Password<input type="text" id="confirmpass" name="confirmpass"
                         onKeyup="checkform()" required></label>
-                <input type="submit" id="save-submit" value="Save" onclick="profileSave(); return false;" formaction="profile.html">
+                <input type="submit" id="save-submit" value="Save" onclick="profileSave(); return false;"
+                    formaction="profile.html">
             </form>
         </div>
     </div>
-    <script src="ediprofile.js"></script>
+    <script src="/editprofile.js"></script>
 
 </body>
 
