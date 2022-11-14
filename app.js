@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const mainRoutes = require('./routes/mainRoutes');
+const User = require('./models/user');
 
 const app = express();
 
