@@ -26,9 +26,7 @@ mongoose.connect(url)
     })
     .catch(err => console.log(err.message));
 
-
-
-
+//set up routes
 app.get('/', (req, res) => {
     res.render('index');
 });
