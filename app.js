@@ -15,7 +15,9 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('tiny'));
 
-mongoose.connect(url)
+
+//connect to MongoDB
+mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
     .then(() => {
         //start the server
         app.listen(port, host, () => {
