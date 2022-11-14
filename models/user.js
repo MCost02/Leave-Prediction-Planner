@@ -1,25 +1,17 @@
-const users = [{
-    fname: 'Test',
-    lname: 'Instructor',
-    email: 'instructor@test.com',
-    password: '123',
-    type: 'instructor',
-},
-{
-    fname: 'Test',
-    lname: 'Admin',
-    email: 'admin@test.com',
-    password: '321',
-    type: 'admin',
-}]
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-//Login function
-function login() {
-    document.getElementById("email").innerHTML;
-
-};
-
-//Sign-Up function
-function signUp() {
-    document.getElementById("email").innerHTML;
+const userSchema = new Schema({
+    firstName: { type: String, required: [true, 'first name is required'] },
+    lastName: { type: String, required: [true, 'last name is required'] },
+    email: {
+        type: String, required: [true, 'email address is required'],
+        unique: [true, 'this email address has been used']
+    },
+    password: { type: String, required: [true, 'password is required'] },
+    isAdmin: { type: Boolean, default: false },
+    dates: [{ type: Date }]
 }
+);
+
+module.exports = mongoose.model('User', userSchema);
