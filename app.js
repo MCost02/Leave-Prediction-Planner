@@ -17,7 +17,7 @@ app.use(morgan('tiny'));
 
 
 //connect to MongoDB
-mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true})
+mongoose.connect(url)
     .then(() => {
         //start the server
         app.listen(port, host, () => {
