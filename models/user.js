@@ -15,6 +15,21 @@ const userSchema = new Schema({
 }
 );
 
+//replace password text with hashed password
+
+//pre middleware
+userSchema.pre('save', function(next){
+    let user = this;
+    if(!user.isModified('password'))
+        return next();
+    bcrypt.hash(user.password, 10)
+    .then(hash=>{
+        user.password = hash;
+        next();
+    })
+    .catch(err=>next(err));
+});
+
 
 module.exports = mongoose.model('User', userSchema);
 
