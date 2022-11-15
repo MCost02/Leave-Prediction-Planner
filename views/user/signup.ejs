@@ -21,13 +21,13 @@
         <div class="login" style="height: 750px;">
             <h2>Create Account</h2>
             <form class="account-form" action="/" method="POST">
-                <label id="firstName-label">First Name <input type="text" id="firstName-input"
+                <label for="firstName">First Name <input type="text" id="firstName" name="firstName"
                         placeholder="Enter your first name" required></label>
-                <label id="lastName-label">Last Name <input type="text" id="lastName-input"
+                <label for="lastName">Last Name <input type="text" id="lastName" name="lastName"
                         placeholder="Enter your last name" required></label>
-                <label id="email-label">Email<input type="email" id="email" placeholder="Enter your email"
+                <label for="email">Email<input type="email" id="email" placeholder="Enter your email" name="email"
                         required></label>
-                <label id="password-label">Password<input type="password" id="password" placeholder="Enter a password"
+                <label for="password">Password<input type="password" id="password" name="password" placeholder="Enter a password"
                         minlength="8" required></label>
                 <input type="submit" id="account-submit" value="Create Account">
             </form>
