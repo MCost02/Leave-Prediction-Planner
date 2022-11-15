@@ -33,6 +33,15 @@ app.get('/', (req, res) => {
 
 app.use('/', mainRoutes);
 
+
+//create a new user
+app.post('/', (req,res,next)=>{
+    let user = new User(req.body);
+    user.save()
+    .then(()=>res.redirect('/login'))
+    .catch(err=>next(err));
+});
+
 app.use((req, res, next) => {
     let err = new Error('The server cannot locate ' + req.url);
     err.status = 404;
