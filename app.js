@@ -38,7 +38,7 @@ app.use('/', mainRoutes);
 app.post('/', (req,res,next)=>{
     let user = new User(req.body);
     user.save()
-    .then(()=>res.redirect('/login'))
+    .then(()=>res.redirect('/instructor-home'))
     .catch(err=>next(err));
 });
 
