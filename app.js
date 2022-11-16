@@ -24,15 +24,11 @@ app.use(session({
     secret: 'vjicosjvnihjfdsnosdnio',
     resave: false,
     saveUninitialized: true,
-    cookie:{maxAge: 4*60*60*1000},
+    cookie:{maxAge: 60*60*1000},
     store: new MongoStore({mongoUrl: 'mongodb://localhost:27017/LPP'})
 }));
 
 app.use((req, res, next)=>{
-    if(!req.session.counter)
-        req.session.counter = 1;
-    else
-        req.session.counter++;
     console.log(req.session);
     next();
 });
@@ -64,7 +60,7 @@ app.post('/', (req,res,next)=>{
 });
 
 //process login request
-app.post('/login', (req, res,next)=>{
+app.post('/login', (req, res, next)=>{
     //authenticate
     let email = req.body.email;
     let password = req.body.password;
@@ -91,12 +87,6 @@ app.post('/login', (req, res,next)=>{
 });
 
 //get profile
-app.get('/profile', (res , req)=>{
-    let id = req.session.user;
-    User.findById(id)
-    .then(user=>res.render('profile', {user}))
-    .catch(err=>next(err));
-});
 
 app.use((req, res, next) => {
     let err = new Error('The server cannot locate ' + req.url);
