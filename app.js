@@ -5,6 +5,7 @@ const brypt = require('bcrypt');
 const mainRoutes = require('./routes/mainRoutes');
 const User = require('./models/user');
 const session = require('express-session');
+const MongoStore = require('connect-mongo');
 
 const app = express();
 
@@ -23,10 +24,11 @@ app.use(session({
     secret: 'vjicosjvnihjfdsnosdnio',
     resave: false,
     saveUninitialized: true,
-    cookie:{maxAge: 4*60*60*1000}
+    cookie:{maxAge: 4*60*60*1000},
+    store: new MongoStore({mongoUrl: 'mongodb://localhost:27017/LPP'})
 }));
 
-app.use((req, res,next)=>{
+app.use((req, res, next)=>{
     if(!req.session.counter)
         req.session.counter = 1;
     else
