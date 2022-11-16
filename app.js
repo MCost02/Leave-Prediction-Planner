@@ -77,17 +77,24 @@ app.post('/login', (req, res,next)=>{
             user.comparePassword(password)
             .then(result=>{
                 if(result){
+                    req.session.user = user._id; //store user id in session
                     res.redirect('/instructor-home');
                 } else {
-                    console.log('wrong password');
                     res.redirect('/login');
                 }
             })
         } else {
-            console.log('wrong email');
             res.redirect('/login');
         }
     })
+    .catch(err=>next(err));
+});
+
+//get profile
+app.get('/profile', (res , req)=>{
+    let id = req.session.user;
+    User.findById(id)
+    .then(user=>res.render('profile', {user}))
     .catch(err=>next(err));
 });
 
