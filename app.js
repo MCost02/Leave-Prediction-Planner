@@ -26,8 +26,13 @@ app.use(session({
     cookie:{maxAge: 4*60*60*1000}
 }));
 
-app.use((res,req,next)=>{
-
+app.use((req, res,next)=>{
+    if(!req.session.counter)
+        req.session.counter = 1;
+    else
+        req.session.counter++;
+    console.log(req.session);
+    next();
 });
 
 //connect to MongoDB
