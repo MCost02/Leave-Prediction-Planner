@@ -20,10 +20,10 @@
     <div id="account-container">
         <div class="login">
             <h2>Sign In</h2>
-            <form class="account-form" action="/instructor-home">
-                <label id="email-label">Email<input type="email" id="email" required></label>
-                <label id="password-label">Password<input type="password" id="password" required></label>
-                <input type="submit" id="account-submit" value="Login">
+            <form class="account-form" action="/login" method="POST">
+                <label for="email">Email<input type="email" id="email" name="email" required></label>
+                <label for="password">Password<input type="password" id="password" name="password" required></label>
+                <input type="submit" id="account-submit" value="Login" name="login">
             </form>
             <div style="text-align: center; margin-top: 20px; font-size: 16px;">
                 <a href="/signup" id="new-account">New Instructor? Create an Account</a>
