@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const brypt = require('bcrypt');
 const mainRoutes = require('./routes/mainRoutes');
 const User = require('./models/user');
+const session = require('express-session');
 
 const app = express();
 
@@ -12,10 +13,22 @@ let host = 'localhost';
 let url = 'mongodb://localhost:27017/LPP';
 app.set('view engine', 'ejs');
 
+
+//middleware
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('tiny'));
 
+app.use(session({
+    secret: 'vjicosjvnihjfdsnosdnio',
+    resave: false,
+    saveUninitialized: true,
+    cookie:{maxAge: 4*60*60*1000}
+}));
+
+app.use((res,req,next)=>{
+
+});
 
 //connect to MongoDB
 mongoose.connect(url)
