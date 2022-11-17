@@ -32,6 +32,8 @@ exports.editProfile = (req, res, next) => {
     res.render('./user/editprofile');
 }
 
+
+
 //user functions
 
 exports.create = (req, res, next) => {
@@ -68,7 +70,11 @@ exports.login = (req, res, next) => {
             .then(result=>{
                 if(result){
                     req.session.user = user._id; //store user id in session
-                    res.redirect('/instructor-home');
+                    if(user.isAdmin) {
+                        res.redirect('/admin-home');
+                    } else {
+                        res.redirect('/instructor-home');
+                    }
                 } else {
                     res.redirect('/login');
                 }
@@ -90,3 +96,11 @@ exports.profile = (req, res, next) => {
     .catch(err=>next(err));
 };
 
+exports.logout = (req, res, next) => {
+    req.session.destroy(err => {
+        if (err)
+            return next(err);
+        else
+            res.redirect('/');
+    });
+};
