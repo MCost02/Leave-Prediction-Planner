@@ -2,6 +2,11 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const dom = new JSDOM(`<div id="calendar"></div>`);
 
+class Instructor {
+    
+}
+
+
 function createCalendar() {
     let nav = 0;
     let clicked = null;
