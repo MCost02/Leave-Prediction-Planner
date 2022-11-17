@@ -3,7 +3,13 @@ const { JSDOM } = jsdom;
 const dom = new JSDOM(`<div id="calendar"></div>`);
 
 class Instructor {
-    
+    constructor(name) {
+        this.name = name;
+        this.importantDates = [];
+    }
+    add(newDate) {
+        this.importantDates.push(newDate);
+    }
 }
 
 
