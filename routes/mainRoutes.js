@@ -10,7 +10,10 @@ router.get('/database', controller.database);
 router.get('/events', controller.events);
 
 router.get('/login', controller.getUserLogin);
+router.post('/login', controller.login);
 router.get('/signup', controller.signUp);
+router.post('/', controller.create);
+
 
 router.get('/profile', controller.profile);
 router.get('/editprofile', controller.editProfile);
