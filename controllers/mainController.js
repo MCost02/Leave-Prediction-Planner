@@ -27,9 +27,6 @@ exports.getUserLogin = (req, res, next) => {
 exports.signUp = (req, res, next) => {
     res.render('./user/signup');
 }
-exports.profile = (req, res, next) => {
-    res.render('./user/profile');
-}
 
 exports.editProfile = (req, res, next) => {
     res.render('./user/editprofile');
@@ -83,12 +80,13 @@ exports.login = (req, res, next) => {
     .catch(err=>next(err));
 };
 
-
-exports.logout = (req, res, next) => {
-    req.session.destroy(err => {
-        if (err)
-            return next(err);
-        else
-            res.redirect('/');
-    });
+exports.profile = (req, res, next) => {
+    let id = req.session.user;
+    model.findById(id)
+    .then(results => {
+        const user = results;
+        res.render('./user/profile', {user})
+    })
+    .catch(err=>next(err));
 };
+
