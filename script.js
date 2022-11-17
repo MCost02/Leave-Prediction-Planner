@@ -2,6 +2,13 @@ const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const dom = new JSDOM(`<div id="calendar"></div>`);
 
+class Child {
+    constructor(name, schoolDistrict) {
+        this.name = name;
+        this.schoolDistrict = schoolDistrict;
+    }
+}
+
 class Instructor {
     constructor(name) {
         this.name = name;
