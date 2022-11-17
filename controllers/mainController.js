@@ -70,6 +70,7 @@ exports.login = (req, res, next) => {
             .then(result=>{
                 if(result){
                     req.session.user = user._id; //store user id in session
+                    req.flash('success', 'You have successfully logged in');
                     if(user.isAdmin) {
                         res.redirect('/admin-home');
                     } else {
