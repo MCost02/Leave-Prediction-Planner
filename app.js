@@ -2,7 +2,6 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
 const mainRoutes = require('./routes/mainRoutes');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');

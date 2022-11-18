@@ -23,24 +23,27 @@
             <h2>Profile</h2>
             <div class="profile-info">
                 <h3>Name:</h3>
-                <p><%= user.firstName + " " + user.lastName%></p>
+                <p>
+                    <%= user.firstName + " " + user.lastName%>
+                </p>
             </div>
             <div class="profile-info">
                 <h3>Email:</h3>
-                <p><%= user.email%></p>
+                <p>
+                    <%= user.email%>
+                </p>
             </div>
             <div class="important-dates">
                 <div class="date-header">
-                    <h3>Important Dates</h3>
+                    <h3>Significant Dates</h3>
                     <form>
-                        <button type="submit" formmethod="GET" formaction="/">Add</button>
-                        <button type="submit" formmethod="POST"
-                            formaction="?_method=DELETE">Delete</button>
+                        <button type="" formaction="/addDate">Add</button>
                     </form>
                 </div>
+
                 <div class="dates">
-                    <p>8/27/2022</p>
-                    <p>12/20/2022</p>
+                    <p>
+                    </p>
                 </div>
             </div>
             <form>

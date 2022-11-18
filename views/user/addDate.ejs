@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Add Date</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/">
+            <h1>Leave Prediction Planner</h1>
+        </a>
+        <nav class="navigation">
+            <a href="/profile">Profile</a>
+            <a href="/instructor-home">Home</a>
+            <a href="/">Sign Out</a>
+        </nav>
+    </header>
+
+    <div id="account-container">
+        <div class="login">
+            <h2>Add Date</h2>
+            <form class="account-form" action="/sigdates" method="POST">
+                <label>Date: <input type="date" name="date" required></label>
+                <label>Description: <br><textarea name="description" cols="23" rows="4"
+                        placeholder="Optional"></textarea></label>
+                <input type="submit" id="account-submit" value="Add Date">
+            </form>
+            <%if(errorMessages.length> 0){
+                errorMessages.forEach(message => {%>
+                <div class='error'>
+                    <%=message%>
+                </div>
+                <% }); } %>
+
+                    <%if(successMessages.length> 0){
+                        successMessages.forEach(message => {%>
+                        <div class='success'>
+                            <%=message%>
+                        </div>
+                        <% }); } %>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

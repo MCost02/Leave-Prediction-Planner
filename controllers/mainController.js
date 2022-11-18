@@ -1,5 +1,6 @@
-const user = require('../models/user');
 const model = require('../models/user');
+const date_model = require('../models/sig-date');
+
 
 exports.index = (req, res) => {
     res.render('index');
@@ -130,4 +131,25 @@ exports.logout = (req, res, next) => {
         else
             res.redirect('/');
     });
+};
+
+exports.newDate = (req, res, next) => {
+    res.render('./user/addDate');
+};
+
+exports.addDate = (req, res, next) => {
+    let sigdate = new date_model(req.body);
+    sigdate.instructor = req.session.user;
+    sigdate.save()
+        .then(sigdate => {
+            req.flash('success', 'Date has been added to your profile');
+            res.redirect('/profile');
+        })
+        .catch(err => {
+            if (err.name === 'ValidationError') {
+                req.flash('error', err.message);
+                return res.redirect('/back');
+            }
+            next(err);
+        });
 };
