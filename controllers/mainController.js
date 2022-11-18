@@ -112,7 +112,7 @@ exports.updateProfile = (req, res, next) => {
     let id = req.session.user;
     model.findByIdAndUpdate(id, user, { runValidators: true })
         .then(user => {
-            return res.redirect('/users/' + id);
+            return res.redirect('/profile');
         })
         .catch(err => {
             if (err.name === 'ValidationError') {

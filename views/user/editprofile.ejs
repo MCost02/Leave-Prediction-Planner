@@ -22,7 +22,7 @@
         <div class="profile" style="height: 750px;">
             <h2>Edit Profile</h2>
             <h3 id="save" style="font-size: 16px;"></h3>
-            <form class="profile-form" action="/users/<%= user.id%>?_method=PUT" method="POST">
+            <form class="profile-form" action="?_method=PUT" method="POST">
                 <label>First Name: <input type="text" name="firstName" value="<%= user.firstName%>" required></label>
                 <label>Last Name: <input type="text" name="lastName" value="<%= user.lastName%>" required></label>
                 <label>Email: <input type="email" name="email" value="<%= user.email%>" required></label>

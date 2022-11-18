@@ -1,12 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
+const methodOverride = require('method-override');
 const mongoose = require('mongoose');
-const brypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const mainRoutes = require('./routes/mainRoutes');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
-
 
 const app = express();
 
@@ -31,18 +31,19 @@ mongoose.connect(url)
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('tiny'));
+app.use(methodOverride('_method'));
 
 app.use(session({
     secret: 'vjicosjvnihjfdsnosdnio',
     resave: false,
     saveUninitialized: true,
-    cookie:{maxAge: 60*60*1000},
-    store: new MongoStore({mongoUrl: 'mongodb://localhost:27017/LPP'})
+    cookie: { maxAge: 60 * 60 * 1000 },
+    store: new MongoStore({ mongoUrl: 'mongodb://localhost:27017/LPP' })
 }));
 
 
 app.use(flash());
-    
+
 app.use((req, res, next) => {
     res.locals.user = req.session.user || null
     res.locals.successMessages = req.flash('success');
