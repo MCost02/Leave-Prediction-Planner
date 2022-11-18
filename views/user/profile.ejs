@@ -19,7 +19,7 @@
     </header>
 
     <div class="profile-container">
-        <div class="profile" style="height: 450px;">
+        <div class="profile" style="min-height: 500px;">
             <h2>Profile</h2>
             <div class="profile-info">
                 <h3>Name:</h3>
@@ -30,9 +30,14 @@
                 <p><%= user.email%></p>
             </div>
             <div class="important-dates">
-                <h3>Important Dates</h3>
-                <p>8/27/2022</p>
-                <p>12/20/2022</p>
+                <div class="date-header">
+                    <h3>Important Dates</h3>
+                    <button>Edit</button>
+                </div>
+                <div class="dates">
+                    <p>8/27/2022</p>
+                    <p>12/20/2022</p>
+                </div>
             </div>
             <form>
                 <input type="submit" value="Edit Account Information" id="edit" formaction="/editprofile">

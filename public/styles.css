@@ -294,6 +294,28 @@ input {
     font-family: 'Roboto slab', serif;
 }
 
+.date-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date-header button {
+    border-style: none;
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
+    background: var(--yellow);
+    color: black;
+    font-family: 'Roboto slab', serif;
+}
+
+.dates {
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+}
+
 /** Flash Messages**/
 .error, .success {
     text-align: center;
