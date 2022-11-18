@@ -15,14 +15,6 @@ let host = 'localhost';
 let url = 'mongodb://localhost:27017/LPP';
 app.set('view engine', 'ejs');
 
-app.use(session({
-    secret: 'vjicosjvnihjfdsnosdnio',
-    resave: false,
-    saveUninitialized: true,
-    cookie:{maxAge: 60*60*1000},
-    store: new MongoStore({mongoUrl: 'mongodb://localhost:27017/LPP'})
-}));
-
 
 //connect to MongoDB
 mongoose.connect(url)
@@ -35,6 +27,20 @@ mongoose.connect(url)
     .catch(err => console.log(err.message));
 
 
+//middleware
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+app.use(morgan('tiny'));
+
+app.use(session({
+    secret: 'vjicosjvnihjfdsnosdnio',
+    resave: false,
+    saveUninitialized: true,
+    cookie:{maxAge: 60*60*1000},
+    store: new MongoStore({mongoUrl: 'mongodb://localhost:27017/LPP'})
+}));
+
+
 app.use(flash());
     
 app.use((req, res, next) => {
@@ -44,9 +50,6 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(express.static('public'));
-app.use(express.urlencoded({ extended: true }));
-app.use(morgan('tiny'));
 
 //set up routes
 app.get('/', (req, res) => {
