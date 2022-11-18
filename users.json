@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "637712456db870091ac45dfb"
+  },
+  "firstName": "Jon",
+  "lastName": "Stamos",
+  "email": "admin@gmail.com",
+  "password": "$2b$10$QteDT9qJu.DixMAPqW7dk.F/5ghPHAL1RMmVyT2FIfKgGSK00d.9K",
+  "isAdmin": true,
+  "dates": [],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6377150550dcda397fcea785"
+  },
+  "firstName": "test",
+  "lastName": "user",
+  "email": "instructor@gmail.com",
+  "password": "$2b$10$cHBg09RVcxbNijCTX8dB5ec4fIW90FejDBkENHEPm44o8hBqEDOja",
+  "isAdmin": false,
+  "dates": [],
+  "__v": 0
+}]
