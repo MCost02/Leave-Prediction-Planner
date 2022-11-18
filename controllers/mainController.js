@@ -84,10 +84,10 @@ exports.login = (req, res, next) => {
 
 exports.profile = (req, res, next) => {
     let id = req.session.user;
-    model.findById(id)
+    Promise.all([model.findById(id), date_model.find({ instructor: id })])
         .then(results => {
-            const user = results;
-            res.render('./user/profile', { user })
+            const [user, sigdates] = results;
+            res.render('./user/profile', { user, sigdates })
         })
         .catch(err => next(err));
 };

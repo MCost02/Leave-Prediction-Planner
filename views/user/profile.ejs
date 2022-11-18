@@ -42,8 +42,14 @@
                 </div>
 
                 <div class="dates">
-                    <p>
-                    </p>
+                    <%if(sigdates.length){%>
+                        <%sigdates.forEach(sigdate=> {%>
+                            <p>
+                                <%=sigdate.date%>
+                            </p>
+                            <%}); } else {%>
+                                <p>You have not created any connections</p>
+                                <%}%>
                 </div>
             </div>
             <form>
