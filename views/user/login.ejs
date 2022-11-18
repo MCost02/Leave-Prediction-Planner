@@ -9,6 +9,8 @@
     <title>Login</title>
 </head>
 
+
+
 <body>
     <header class="header">
         <a href="/">
@@ -25,6 +27,21 @@
                 <label for="password">Password<input type="password" id="password" name="password" required></label>
                 <input type="submit" id="account-submit" value="Login" name="login">
             </form>
+            
+            <%if(errorMessages.length> 0){
+                errorMessages.forEach(message => {%>
+                <div class='error'>
+                    <%=message%>
+                </div>
+                <% }); } %>
+            
+                    <%if(successMessages.length> 0){
+                        successMessages.forEach(message => {%>
+                        <div class='success'>
+                            <%=message%>
+                        </div>
+                        <% }); } %>
+
             <div style="text-align: center; margin-top: 20px; font-size: 16px;">
                 <a href="/signup" id="new-account">New Instructor? Create an Account</a>
             </div>
