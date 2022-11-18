@@ -39,7 +39,7 @@ exports.editProfile = (req, res, next) => {
 exports.create = (req, res, next) => {
     let user = new model(req.body);
     user.save()
-        .then(user => res.redirect('/instructor-home'))
+        .then(user => res.redirect('/'))
         .catch(err => {
             if (err.name === 'ValidationError') {
                 req.flash('error', err.message);
