@@ -17,6 +17,7 @@ router.post('/', controller.create);
 
 router.get('/profile', controller.profile);
 router.get('/editprofile', controller.editProfile);
+router.put('/:id', controller.updateProfile);
 router.get('/logout', controller.logout);
 
 
