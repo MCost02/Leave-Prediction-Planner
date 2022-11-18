@@ -27,7 +27,7 @@
                 <label for="password">Password<input type="password" id="password" name="password" required></label>
                 <input type="submit" id="account-submit" value="Login" name="login">
             </form>
-            
+
             <%if(errorMessages.length> 0){
                 errorMessages.forEach(message => {%>
                 <div class='error'>
@@ -42,7 +42,7 @@
                         </div>
                         <% }); } %>
 
-            <div style="text-align: center; margin-top: 20px; font-size: 16px;">
+            <div style="text-align: center; margin-top: 15px; font-size: 16px;">
                 <a href="/signup" id="new-account">New Instructor? Create an Account</a>
             </div>
 

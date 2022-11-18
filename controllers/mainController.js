@@ -77,7 +77,7 @@ exports.login = (req, res, next) => {
                         res.redirect('/instructor-home');
                     }
                 } else {
-                    req.flash('error', 'wrong password');
+                    req.flash('error', 'incorrect password');
                     res.redirect('/login');
                 }
             })

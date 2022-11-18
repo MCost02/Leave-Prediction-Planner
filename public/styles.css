@@ -293,3 +293,11 @@ input {
     font-size: 20px;
     font-family: 'Roboto slab', serif;
 }
+
+/** Flash Messages**/
+.error, .success {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: red;
+}
