@@ -17,8 +17,10 @@ router.post('/', controller.create);
 router.get('/profile', controller.profile);
 router.get('/editprofile', controller.editProfile);
 router.put('/:id', controller.updateProfile);
+router.get('/logout', controller.logout);
+
 router.get('/addDate', controller.newDate)
 router.post('/sigdates', controller.addDate);
-router.get('/logout', controller.logout);
+router.delete('/:id', controller.deleteDate);
 
 module.exports = router;

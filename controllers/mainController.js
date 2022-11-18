@@ -153,3 +153,18 @@ exports.addDate = (req, res, next) => {
             next(err);
         });
 };
+
+exports.deleteDate = (req, res, next) => {
+    let id = req.params.id;
+    date_model.findByIdAndDelete(id)
+        .then(sigdate => {
+            if (sigdate) {
+                res.redirect('/profile');
+            } else {
+                let err = new Error('Cannot find date with id ' + id);
+                err.status = 404;
+                return next(err);
+            }
+        })
+        .catch(err => next(err));
+};
