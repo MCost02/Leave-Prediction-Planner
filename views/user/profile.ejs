@@ -32,7 +32,11 @@
             <div class="important-dates">
                 <div class="date-header">
                     <h3>Important Dates</h3>
-                    <button>Edit</button>
+                    <form>
+                        <button type="submit" formmethod="GET" formaction="/">Add</button>
+                        <button type="submit" formmethod="POST"
+                            formaction="?_method=DELETE">Delete</button>
+                    </form>
                 </div>
                 <div class="dates">
                     <p>8/27/2022</p>
