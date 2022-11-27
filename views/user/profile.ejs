@@ -33,36 +33,51 @@
                     <%= user.email%>
                 </p>
             </div>
-            <div class="important-dates">
-                <div class="date-header">
-                    <h3>Significant Dates</h3>
-                    <form>
-                        <button type="" formaction="/addDate">Add</button>
-                    </form>
-                </div>
-
-                <div class="date">
-                    <%if(sigdates.length){%>
-                        <%sigdates.forEach(sigdate=> {%>
-                            <p>
-                                <%=sigdate.date%>
-                            </p>
-                            <form>
-                                <button type="submit" formaction="/<%=sigdate.id%>?_method=DELETE"
-                                    formmethod="POST">Delete</button>
-                            </form>
-                            <%}); } else {%>
-                                <p>You have not added any significant dates to your profile.</p>
-                                <%}%>
-                </div>
+            <div class="date-header">
+                <h3>Significant Dates</h3>
+                <form>
+                    <button type="" formaction="/addDate">Add</button>
+                </form>
+            </div>
+            <div class="dates">
+                <%if(sigdates.length) {%>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <%sigdates.forEach(sigdate=>{%>
+                            <tr>
+                                <td class="date">
+                                    <%=sigdate.date%>
+                                </td>
+                                <td>
+                                    <%if(sigdate.description) {%>
+                                        — <%=sigdate.description%>
+                                            <%} else {%>
+                                                <%}%>
+                                </td>
+                                <td class="remove">
+                                    <form>
+                                        <button type="submit" formaction="/<%=sigdate.id%>?_method=DELETE"
+                                            formmethod="POST">Remove</button>
+                                    </form>
+                                </td>
+                            </tr>
+                            <%});%>
+                    </table>
+                    <%} else {%>
+                        <p>You have not added any significant dates to your profile.</p>
+                        <%}%>
             </div>
             <form>
                 <input type="submit" value="Edit Account Information" id="edit" formaction="/editprofile">
             </form>
-
         </div>
     </div>
-
 </body>
 
 </html>

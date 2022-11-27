@@ -137,7 +137,7 @@ input {
     border-radius: 15px;
 }
 
-#legend > h3 {
+#legend>h3 {
     text-align: center;
 }
 
@@ -252,19 +252,19 @@ input {
 .profile {
     max-width: 500px;
     min-width: 300px;
-    height: 450px;
     margin: 45px auto;
     padding: 20px 40px;
     border-radius: 10px;
     background: rgba(15, 24, 45, 0.95);
 }
 
-.profile >h2 {
+.profile>h2 {
     text-align: center;
     text-decoration: underline;
 }
 
-.profile-info h3, .profile-info p {
+.profile-info h3,
+.profile-info p {
     display: inline;
 }
 
@@ -276,15 +276,8 @@ input {
     margin-top: 20px;
 }
 
-.important-dates {
-    margin-top: 40px;
-}
-
-.important-dates h3 {
-    text-decoration: underline;
-}
-
-#edit, #save-submit {
+#edit,
+#save-submit {
     text-align: center;
     width: 100%;
     margin-top: 40px;
@@ -295,9 +288,11 @@ input {
 }
 
 .date-header {
+    margin-top: 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-decoration: underline;
 }
 
 .date-header button {
@@ -316,8 +311,25 @@ input {
     overflow-y: auto;
 }
 
+.dates thead {
+    display: none;
+}
+
+.dates td.date {
+    width: 22%
+}
+
+.dates td.remove {
+    width: 10%
+}
+
+.remove button:hover {
+    background: var(--yellow);
+}
+
 /** Flash Messages**/
-.error, .success {
+.error,
+.success {
     text-align: center;
     margin-top: 10px;
     font-size: 18px;
