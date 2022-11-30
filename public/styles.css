@@ -287,6 +287,11 @@ input {
     font-family: 'Roboto slab', serif;
 }
 
+#edit:hover {
+    background: #ffc8006b;
+    cursor: pointer;
+}
+
 .date-header {
     margin-top: 40px;
     display: flex;
@@ -303,6 +308,11 @@ input {
     background: var(--yellow);
     color: black;
     font-family: 'Roboto slab', serif;
+    cursor: pointer;
+}
+
+.date-header button:hover {
+    background: #ffc8006b;
 }
 
 .dates {
@@ -323,8 +333,19 @@ input {
     width: 10%
 }
 
-.remove button:hover {
+.remove button {
+    border-style: none;
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
     background: var(--yellow);
+    color: black;
+    font-family: 'Roboto slab', serif;
+}
+
+.remove button:hover {
+    background: #ffc8006b;
+    cursor: pointer;
 }
 
 /** Flash Messages**/
