@@ -16,7 +16,6 @@
         </a>
         <a href="/login">Login</a>
     </header>
-
     <div id="account-container">
         <div class="login" style="height: 750px;">
             <h2>Create Account</h2>
@@ -27,8 +26,8 @@
                         placeholder="Enter your last name" required></label>
                 <label for="email">Email<input type="email" id="email" placeholder="Enter your email" name="email"
                         required></label>
-                <label for="password">Password<input type="password" id="password" name="password" placeholder="Enter a password"
-                        minlength="8" required></label>
+                <label for="password">Password<input type="password" id="password" name="password"
+                        placeholder="Enter a password" minlength="8" maxlength="64" required></label>
                 <input type="submit" id="account-submit" value="Create Account">
             </form>
             <%if(errorMessages.length> 0){
@@ -37,7 +36,6 @@
                     <%=message%>
                 </div>
                 <% }); } %>
-            
                     <%if(successMessages.length> 0){
                         successMessages.forEach(message => {%>
                         <div class='success'>
@@ -46,8 +44,6 @@
                         <% }); } %>
         </div>
     </div>
-
-
 </body>
 
 </html>
