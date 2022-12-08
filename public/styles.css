@@ -356,3 +356,11 @@ input {
     font-size: 18px;
     color: red;
 }
+
+/** Database **/
+#database-container {
+    width: 80%;
+    padding: 40px;
+    margin: 0 auto;
+    border: 2px solid red;
+}
