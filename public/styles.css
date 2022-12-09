@@ -361,15 +361,16 @@ input {
 #database-container {
     padding: 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 #userDB ,#dateDB {
     background: var(--navy);
-    border-radius: 5px;
     padding: 15px;
     width: 600px;
     height: 500px;
+    overflow-y: scroll;
+    border: 3px solid black;
 }
 
 #userDB h2, #dateDB h2 { 
