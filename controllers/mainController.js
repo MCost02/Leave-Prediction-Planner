@@ -21,7 +21,9 @@ exports.database = (req, res, next) => {
 }
 
 exports.events = (req, res, next) => {
-    res.render('events');
+    date_model.find()
+        .then(sigdates => res.render('events', { sigdates }))
+        .catch(err => next(err));
 }
 
 exports.getUserLogin = (req, res, next) => {

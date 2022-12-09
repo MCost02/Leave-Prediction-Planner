@@ -23,7 +23,13 @@
         <div id="dateDB">
             <h2>List of Dates</h2>
             <div id="dateList">
-                <p><a>John Holmes</a></p> 
+                <% if(sigdates.length){ %>
+                    <%sigdates.forEach(sigdate=>{%>
+                        <p>
+                            <%= sigdate.date %>
+                        </p>
+                        <%})%>
+                            <%}%>
             </div>
         </div>
     </div>
