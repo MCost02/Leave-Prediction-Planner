@@ -1,6 +1,6 @@
 const express = require('express');
 const controller = require('../controllers/mainController');
-const { isGuest, isLoggedIn } = require('../middlewares/auth');
+const { isGuest, isLoggedIn, isCreator } = require('../middlewares/auth');
 const { logInLimiter } = require('../middlewares/rateLimiters');
 
 const router = express.Router();
@@ -24,6 +24,6 @@ router.put('/:id', isLoggedIn, controller.updateProfile);
 
 router.get('/addDate', isLoggedIn, controller.newDate)
 router.post('/sigdates', isLoggedIn, controller.addDate);
-router.delete('/:id', isLoggedIn, controller.deleteDate);
+router.delete('/:id', isLoggedIn, isCreator, controller.deleteDate);
 
 module.exports = router;
