@@ -359,8 +359,31 @@ input {
 
 /** Database **/
 #database-container {
-    width: 80%;
     padding: 40px;
-    margin: 0 auto;
-    border: 2px solid red;
+    display: flex;
+    justify-content: space-around;
+}
+
+#userDB ,#dateDB {
+    background: var(--navy);
+    border-radius: 5px;
+    padding: 15px;
+    width: 600px;
+    height: 500px;
+}
+
+#userDB h2, #dateDB h2 { 
+    text-align: center;
+    text-decoration: underline;
+}
+
+#userList, #dateList{
+    list-style: none;
+    text-align: center;
+}
+
+#userList p, #dateList p {
+    border: 2px solid white;
+    margin: 0;
+    padding: 10px;
 }
