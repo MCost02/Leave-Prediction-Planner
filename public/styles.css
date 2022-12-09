@@ -364,7 +364,7 @@ input {
     justify-content: center;
 }
 
-#userDB ,#dateDB {
+#userDB {
     background: var(--navy);
     padding: 15px;
     width: 600px;
@@ -373,17 +373,17 @@ input {
     border: 3px solid black;
 }
 
-#userDB h2, #dateDB h2 { 
+#userDB h2{ 
     text-align: center;
     text-decoration: underline;
 }
 
-#userList, #dateList{
+#userList{
     list-style: none;
     text-align: center;
 }
 
-#userList p, #dateList p {
+#userList p{
     border: 2px solid white;
     margin: 0;
     padding: 10px;
