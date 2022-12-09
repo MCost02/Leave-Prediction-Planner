@@ -15,7 +15,9 @@ exports.adminHome = (req, res, next) => {
 }
 
 exports.database = (req, res, next) => {
-    res.render('database');
+    model.find()
+        .then(users => res.render('database', { users }))
+        .catch(err => next(err));
 }
 
 exports.events = (req, res, next) => {

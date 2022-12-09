@@ -23,18 +23,14 @@
         <div id="userDB">
             <h2>Users</h2>
             <div id="userList">
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                <p><a>John Holmes</a></p> 
-                
+                <% if(users.length){ %>
+                    <%users.forEach(user=>{%>
+                        <p>
+                            <%= user.firstName %>
+                        </p>
+                        <%})%>
+                            <%}%>
+
             </div>
         </div>
     </div>
