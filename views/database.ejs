@@ -32,21 +32,21 @@
                         <%if(sigdates.length) {%>
                             <ul>
                                 <%sigdates.forEach(sigdate=>{%>
-                                    <li>
-                                        <%=sigdate.date%>
-                                    </li>
-                                    <%});%>
+                                    <%if(sigdate.instructor==user.id ) {%>
+                                        <li>
+                                            <%=sigdate.date%>
+                                        </li>
+                                        <%}%>
+                                            <%});%>
                             </ul>
                             <%} else {%>
                                 <p>User has not added any significant dates to their profile.</p>
                                 <%}%>
                                     <%})%>
                                         <%}%>
-
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
