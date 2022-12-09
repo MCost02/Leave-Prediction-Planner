@@ -15,10 +15,13 @@ exports.adminHome = (req, res, next) => {
 }
 
 exports.database = (req, res, next) => {
-    model.find()
-        .then(users => res.render('database', { users }))
+    Promise.all([model.find(), date_model.find()])
+        .then(results => {
+            const [users, sigdates] = results;
+            res.render('database', { users, sigdates })
+        })
         .catch(err => next(err));
-}
+};
 
 exports.events = (req, res, next) => {
     date_model.find()
