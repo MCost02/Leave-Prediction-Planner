@@ -364,26 +364,26 @@ input {
     justify-content: center;
 }
 
-#userDB {
+#userDB ,#dateDB {
     background: var(--navy);
-    padding: 15px;
+    padding: 25px;
     width: 600px;
     height: 500px;
     overflow-y: scroll;
     border: 3px solid black;
 }
 
-#userDB h2{ 
+#userDB h2, #dateDB h2 { 
     text-align: center;
     text-decoration: underline;
 }
 
-#userList{
+#userList, #dateList{
     list-style: none;
     text-align: center;
 }
 
-#userList p{
+#userList p, #dateList p {
     border: 2px solid white;
     margin: 0;
     padding: 10px;
