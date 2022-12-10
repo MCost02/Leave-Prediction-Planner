@@ -1,6 +1,6 @@
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
-const dom = new JSDOM(`<div id="calendar"></div>`);
+
 
 class Child {
     constructor(name, schoolDistrict) {
@@ -19,6 +19,94 @@ class Instructor {
     }
 }
 
+class Calendar {
+    constructor() {
+        this.totalMonths = 12;
+        this.currentDay = new Date();
+	    this.month = currentDay.getMonth();
+	    this.year = currentDay.getYear();
+
+        this.calendar = new Array(totalMonths);
+        this.heatMap = new Array(totalMonths);
+        this.tempMap = new Array(totalMonths);
+
+        let daysInMonth = new Date(year, month+1, 0).getDate();
+		let firstDayofMonth = new Date(year, month, 1).getDate();
+		 
+		for (let m = 0; m < totalMonths; m++) {
+			daysInMonth = new Date(year, month+1+m, 0).getDate();
+			
+			calendar.push(new Array(m));
+			heatMap.push(new Array(m));
+			tempMap.push(new Array(m));
+
+			for (let d = 1; d <= daysInMonth; d++) {
+				heatMap[m].push(0);
+				tempMap[m].push(0);
+				calendar[m].push(new Date(year, month+m, d));
+			}
+		}
+    }
+    updateCalendar() {
+        for (let i = 0; i < instructors.size(); i++) {
+
+			for (let x = 0; x < instructors[i].numDates(); x++) {
+				
+				//this is to figure out which months are which relative to the current month
+				let tempMonth = instructors[i].importantDates[x].getMonth();
+				let tempDay = instructors[i].importantDates[x].getDate()-1;
+				let monthNav = 0;
+				if (tempMonth - month < 0) {
+					monthNav = 12 + (tempMonth - month);
+				} else {
+					monthNav = tempMonth - month;
+				}
+				
+				let potentialDays = 0;
+				
+				if (calendar[monthNav][tempDay].getDay() <= 1) {
+					potentialDays = 3;
+					for (let m = 0; m < potentialDays; m++) {
+						if (tempMap[(monthNav)][tempDay-1+m] == 0) {
+							tempMap[monthNav][tempDay-1+m] = 1;
+						}
+					}    
+					
+				} else if (calendar[monthNav][tempDay].getDay() >= 2 &&  calendar[monthNav][tempDay].getDay <= 4) { 
+					if (tempMap[monthNav][tempDay] == 0) {
+						tempMap[monthNav][tempDay] = 1;
+					}
+				} else if (calendar[monthNav][tempDay].getDay == 5) {
+					potentialDays = 3;
+					for (let m = 0; m < potentialDays; m++) {
+						if (tempMap[monthNav][tempDay+m] == 0) {
+							tempMap[monthNav][tempDay+m] = 1;
+							System.out.println(tempDay+m);
+						}
+					}
+				} else {
+					potentialDays = 2;
+					for (let m = 0; m < potentialDays; m++) {
+						if (tempMap[monthNav][tempDay+m] == 0) {
+							tempMap[monthNav][tempDay+m] = 1;
+						}
+					}
+				}
+				
+
+			}
+			//think of a better way to add to heat map and zero all numbers
+			//maybe use addedDates list and division 
+			for (let j = 0; j < totalMonths; j++) {
+				for (let k = 0; k < heatMap[j].size(); k++) {
+					this.heatMap[j][k] =heatMap[j][k] + tempMap[j][k];
+					this.tempMap[j][k] = 0;
+					
+				}
+			}
+		}
+	}
+}
 
 function createCalendar() {
     let nav = 0;
